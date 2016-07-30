@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      function jsonObjects(){
+        var emp = [{
+          id:100,
+          name:'Steven',
+          salary:5000
+          },{
+            id:101,
+            name:'Micheal',
+            salary:6000
+          }
+        ];
+        document.write("<BR>id: ",emp[0].id);
+        document.write("<BR>name: ",emp[0].name);
+        document.write("<BR>salary: ",emp[0].salary);
+
+        document.write("<BR><BR>id: ",emp[1]["id"]);
+        document.write("<BR>name: ",emp[1]["name"]);
+        document.write("<BR>salary: ",emp[1]["salary"]);
+      }
+    </script>
+  </head>
+  <body onload="jsonObjects()">
+  </body>
+</html>

@@ -1,0 +1,22 @@
+Dependency injection is injection of one instance of a class when that class is dependent on another class.
+
+interface ICreditCard{
+}
+
+class Visa : ICreditCard{
+}
+class Master : ICreditCard{
+}
+
+class Shopping{
+	public void MakePayment(ICreditCard c){
+		//Code to make payment.
+	}
+}
+
+public static void main(){
+	ICreditCard card;
+	card = new Visa();
+	card = new Master ();
+	shop.MakePayment(card);	//This is dependency injection.
+}

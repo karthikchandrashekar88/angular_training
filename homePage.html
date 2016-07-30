@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src="supplier.js"></script>
+    <script>
+      function jsObjects(){
+        var cust = new Object();
+        cust.id = 101;
+        cust.name = "Spike";
+        document.write("<BR>cust id: ",cust.id);
+        document.write("<BR>cust name: ",cust.name);
+        var cust1 = new supplier(1,'karthik','mysore');
+        var cust2 = new supplier(2,'aditya','cochin');
+        // document.write("<BR>cust name of "+cust1.sno+" : ",cust1.sname);
+        // document.write("<BR>cust name of "+cust2.sno+" : ",cust2.sname);
+        cust1.showDetails();
+        cust2.showDetails();
+      }
+    </script>
+  </head>
+  <body onload="jsObjects()">
+  </body>
+</html>

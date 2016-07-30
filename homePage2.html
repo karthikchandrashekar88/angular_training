@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <!-- <script src="supplier.js"></script> -->
+    <script>
+      function jsArrays(){
+
+        // var names = new Array(5);
+        // for(var i=0;i<3;i++){
+        //   names[i]=prompt("Enter a name: ");
+        // }
+        // document.write("<BR>List of names:");
+        // for(var i in names){
+        //   document.write("<BR>"+names[i]);
+        // }
+
+        //When the array length is not defined use push.
+        // var fruits = new Array();
+        // do{
+        //   var ft = prompt("Enter a fruit name");
+        //   fruits.push(ft);
+        //   var ch = prompt("wish to continue ?");
+        // }while (ch === 'y');
+        // document.write("<BR>List of fruits:");
+        // for(var i in fruits){
+        //   document.write("<BR>"+fruits[i]);
+        // }
+
+        //when the values are predefined in the array.
+        // var weekendDays = new Array('fri','sat','sun');
+        // document.write("<BR>List of weekendDays:");
+        // for(var i in weekendDays){
+        //   document.write("<BR>"+weekendDays[i]);
+        // }
+        var cars = ['benz','bmw','audi'];
+        document.write('Luxury cars :',cars+'<BR>');
+        for(var i in cars){
+          document.write("<BR>"+cars[i]);
+        }
+      };
+
+
+    </script>
+  </head>
+  <body onload="jsArrays()">
+  </body>
+</html>

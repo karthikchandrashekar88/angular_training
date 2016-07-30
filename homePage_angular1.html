@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html data-ng-app="">
+  <head>
+    <title>{{person.name}}</title>
+    <script src="angular.min.js"></script>
+    <script>
+    </script>
+  </head>
+  <body data-ng-init="people=[{name:'karthik',address:'mysore'},{name:'Aditya',address:'cochin'}]" >
+    <h3>People</h3>
+      <ul>
+        <!-- <li> {{people[0].name}} lives in {{people[0].address}} </li>
+        <li> {{people[1].name}} lives in {{people[1].address}} </li> -->
+        <li data-ng-repeat="person in people">
+          {{person.name}} lives at {{person.address}}
+        </li>
+      </ul>
+  </body>
+</html>

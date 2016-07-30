@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular Object</title>
+    <script src="../angular.min.js"></script>
+    <script src="studApp.js"></script>
+    <script src="studController.js"></script>
+    <script></script>
+  </head>
+  <body data-ng-app="studnetApp" data-ng-controller="studnetCtrl">
+    <label for="nameLabel">Enter Name: </label>
+    <input type="text" data-ng-model="student.name"/><br/>
+    <label for="nameLabel">Enter surname: </label>
+    <input type="text" data-ng-model="student.surname"/><br/>
+    <label for="nameLabel">Enter fees: </label>
+    <input type="text" data-ng-model="student.fees"/><br/>
+    <label for="nameLabel">Enter subject : </label>
+    <input type="text" data-ng-model="subjectName"></input>
+    <br/>
+    Your name is {{student.fullName() | uppercase}} <br/>
+    Your name is {{student.fullName() | lowercase}} <br/>
+    Your fees is {{student.fees | currency}} <br/>
+    <ul>
+      <li ng-repeat="subject in student.subjects | filter:subjectName | orderBy:'-marks'">
+        {{subject.name}}&nbsp;&nbsp;:&nbsp;&nbsp;{{subject.marks}}
+      </li>
+    </ul>
+
+  </body>
+</html>

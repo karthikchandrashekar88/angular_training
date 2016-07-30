@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular Object</title>
+    <script src="../angular.min.js"></script>
+    <script src="demoApp.js"></script>
+    <script src="demoController.js"></script>
+    <script></script>
+  </head>
+  <body data-ng-app="formApp" data-ng-controller="studnetCtrl">
+    <form novalidate>
+      <label for="nameLabel">Enter Name: </label>
+      <input type="text" data-ng-model="user.name"/><br/>
+      <label for="surnameLabel">Enter surname: </label>
+      <input type="text" data-ng-model="user.surname"/><br/>
+      <button ng-click="reset()" ng-mouseover="changeColor()"
+        style="color:{{btnColor}}"> RESET </button>
+      {{user}}
+      <br/>
+      <br/>
+      <br/>
+        <label for="nameLabel">Enter Name: </label>
+        <input type="text" data-ng-model="master.name"/><br/>
+    </form>
+  </body>
+</html>

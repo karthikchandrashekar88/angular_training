@@ -1,0 +1,13 @@
+{
+  "name": "meanstack_smc",
+  "version": "0.0.1",
+  "description": "meanstack demo",
+  "author": {
+    "name": "SMC"
+  },
+  "dependencies": {
+    "express" : "*",
+    "path" : "*",
+    "mongoose" : "*"
+  }
+}
