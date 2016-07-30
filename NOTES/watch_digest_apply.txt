@@ -1,0 +1,9 @@
+$scope.$watch will watch over the variables in the current controller scope.
+
+$scope.$digest will invoke the watch for each and every variable in the scope.
+
+If we have nested controllers, and we need to update parent and child scope, we go for $scope.$apply.
+
+2 cases where angular doesn't invoke the digest or apply explicitely:
+	1) when events are dynamically generated and it updates the binding of an element.
+	2) when 3rd party APIs update the current binding of any elements in that scope.

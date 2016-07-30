@@ -50,7 +50,7 @@
     </form><br/>
     <button ng-click="addProduct()">Add Product</button><br/><br/><br/>
     <h3>Delete a Product</h3>
-    <select ng-model="selectedId" ng-change="update(selectedId)"
+    <select ng-model="selectedProduct" ng-change="update(selectedProduct)"
       ng-init="selectedId = selectedId || existingProducts[0].id"
       ng-options="product.id for product in existingProducts">
     </select>

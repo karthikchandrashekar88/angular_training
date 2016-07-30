@@ -51,17 +51,22 @@ app.post('/addProduct',function(req,res){
   console.log("in post",pdtData);
   var newPdt = new productModel(pdtData);
   newPdt.save( function(error, data){
-    if(error){
-        res.json(error);
-    }
-    else{
-        res.json(data);
-    }
+    if(error) res.json(error);
+    else res.json(data);
   });
 });
 
-app.put('/editProduct/:id',function(req,res){ //editProduct?name=aditya
-  console.log("put hit", req.params.id);
+// app.put('/editProduct/:id',function(req,res){ //editProduct?name=aditya
+//   console.log("put hit", req.params.id);
+// });
+
+app.delete('/deleteProduct',function(req,res){
+  console.log("deleteProduct hit req.query", req.query);
+  productModel.remove(req.query,function(err){
+    console.log("err",err);
+    if(err) res.send(err);
+    else res.send('DELETED');
+  });
 });
 
  var server = app.listen(55000, function(){
