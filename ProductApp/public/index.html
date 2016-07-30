@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product App</title>
+    <script src='./js/angular.min.js'></script>
+    <script src='./js/productController.js'></script>
+    </script>
+  </head>
+  <body data-ng-app="productApp" data-ng-controller="productCtrl">
+    <h3>Products</h3>
+      <table style="width:100%;">
+        <tr style="text-align:left;background-color: #f1f1c1;">
+          <th>Product ID</th>
+          <th>Product Name</th>
+          <th>Category</th>
+          <th>Price</th>
+        </tr>
+        <tr data-ng-repeat="product in existingProducts" style="text-align:left;background-color: #eee;">
+          <td>{{product.id}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.category}}</td>
+          <td>{{product.price}}</td>
+        </tr>
+      </table><br/><br/><br/>
+    <h3>Add new Product</h3>
+    <form id='prodForm'>
+      <table style="width:35%;">
+        <tr>
+          <td><label for="id">Product ID: </label></td>
+          <td><input type="text" ng-model="productId" id="id" /></td>
+        </tr>
+        <tr>
+          <td><label for="name">Product Name: </label></td>
+          <td><input type="text" ng-model="productName" id="name" /></td>
+        </tr>
+        <tr>
+          <td><label for="type">Category: </label></td>
+          <td>
+            <select id="type" ng-model="productType">
+              <option value="Software">Software</option>
+              <option value="Hardware">Hardware</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="id">Price: </label></td>
+          <td><input type="text" ng-model="price" id="price" /></td>
+        </tr>
+      </table>
+    </form><br/>
+    <button ng-click="addProduct()">Add Product</button><br/><br/><br/>
+    <h3>Delete a Product</h3>
+    <select ng-model="selectedId" ng-change="update(selectedId)"
+      ng-init="selectedId = selectedId || existingProducts[0].id"
+      ng-options="product.id for product in existingProducts">
+    </select>
+    <button ng-click="deleteProduct()">Delete Product</button><br/><br/><br/>
+  </body>
+</html>

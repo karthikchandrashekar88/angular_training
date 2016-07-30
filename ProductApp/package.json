@@ -6,8 +6,9 @@
     "name": "SMC"
   },
   "dependencies": {
-    "express" : "*",
-    "path" : "*",
-    "mongoose" : "*"
+    "body-parser": "^1.15.2",
+    "express": "*",
+    "mongoose": "*",
+    "path": "*"
   }
 }

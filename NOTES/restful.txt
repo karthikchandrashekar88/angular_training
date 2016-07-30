@@ -1,0 +1,5 @@
+Web API (RESTful services)
+HTTP GET - Retrieve(SELECT)
+HTTP POST - Retrieve(INSERT)
+HTTP PUT - Retrieve(UPDATE)
+HTTP DELETE - Retrieve(DELETE)
